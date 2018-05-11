@@ -441,7 +441,7 @@ export namespace Expressions {
                     next: nav
                 };
             }
-        }else if (!token) {
+        } else if (!token) {
             token = NameOrIdentifier.streamProperty(value, index);
             if (token) index = token.next;
         }
@@ -801,7 +801,7 @@ export namespace Expressions {
             token = {
                 entity: entity
             };
-        }else token = {
+        } else token = {
             entitySet: entitySet,
             keys: predicate
         };

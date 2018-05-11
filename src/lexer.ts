@@ -409,7 +409,7 @@ export namespace Lexer {
         return Lexer.ALPHA(value) || value === 0x5f;
     }
     export function identifierCharacter(value: number): boolean {
-        return Lexer.identifierLeadingCharacter(value) || Lexer.DIGIT(value);
+        return Lexer.identifierLeadingCharacter(value) || Lexer.DIGIT(value) || value === 0x24;
     }
     export function beginObject(value: Utils.SourceArray, index: number): number {
         let bws = Lexer.BWS(value, index);
