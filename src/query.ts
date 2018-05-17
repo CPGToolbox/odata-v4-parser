@@ -519,6 +519,9 @@ export namespace Query {
         if (!eq) return;
         index = eq;
 
+        // allow space before filter expression
+        if (Lexer.SP(value[index])) index++;
+
         let expr = Expressions.boolCommonExpr(value, index);
         if (!expr) return;
         index = expr.next;
